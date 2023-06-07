@@ -1,0 +1,35 @@
+{
+  "id": "user_card",
+  "type": "SharedSlice",
+  "name": "UserCards",
+  "description": "UserCard",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "name": {
+          "type": "Text",
+          "config": { "label": "name", "placeholder": "" }
+        },
+        "embadedfield": {
+          "type": "Embed",
+          "config": { "label": "embadedfield", "placeholder": "" }
+        },
+        "avatar": {
+          "type": "Image",
+          "config": {
+            "label": "avatar",
+            "constraint": { "width": 300, "height": 300 },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
