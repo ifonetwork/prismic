@@ -1,0 +1,23 @@
+{
+  "id": "slider",
+  "type": "SharedSlice",
+  "name": "Slider",
+  "description": "Slider",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "name": {
+          "type": "Text",
+          "config": { "label": "name", "placeholder": "" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

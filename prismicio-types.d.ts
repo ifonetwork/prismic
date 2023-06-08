@@ -107,7 +107,13 @@ type PageDocumentDataSlicesSlice =
   | ImageSlice
   | ImageCardsSlice
   | TextWithImageSlice
-  | UserCardSlice;
+  | UserCardSlice
+  | SliderSlice
+  | TestimotalsSlice
+  | ContactFormSlice
+  | TreatmentsSlice
+  | NumbersSlice
+  | SpecialistsSlice;
 /**
  * Page document from Prismic
  *
@@ -152,6 +158,52 @@ export type AllDocumentTypes =
   | NavigationDocument
   | PageDocument
   | SettingsDocument;
+/**
+ * Primary content in ContactForm → Primary
+ *
+ */
+interface ContactFormSliceDefaultPrimary {
+  /**
+   * name field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismic.KeyTextField;
+}
+/**
+ * Default variation for ContactForm Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ContactFormSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContactFormSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *ContactForm*
+ *
+ */
+type ContactFormSliceVariation = ContactFormSliceDefault;
+/**
+ * ContactForm Shared Slice
+ *
+ * - **API ID**: `contact_form`
+ * - **Description**: `ContactForm`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ContactFormSlice = prismic.SharedSlice<
+  "contact_form",
+  ContactFormSliceVariation
+>;
 /**
  * Primary content in Hero → Primary
  *
@@ -406,6 +458,52 @@ export type ImageCardsSlice = prismic.SharedSlice<
   ImageCardsSliceVariation
 >;
 /**
+ * Primary content in Numbers → Primary
+ *
+ */
+interface NumbersSliceDefaultPrimary {
+  /**
+   * name field in *Numbers → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: numbers.primary.name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismic.KeyTextField;
+}
+/**
+ * Default variation for Numbers Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NumbersSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<NumbersSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *Numbers*
+ *
+ */
+type NumbersSliceVariation = NumbersSliceDefault;
+/**
+ * Numbers Shared Slice
+ *
+ * - **API ID**: `numbers`
+ * - **Description**: `Numbers`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NumbersSlice = prismic.SharedSlice<
+  "numbers",
+  NumbersSliceVariation
+>;
+/**
  * Primary content in Quote → Primary
  *
  */
@@ -458,6 +556,141 @@ type QuoteSliceVariation = QuoteSliceDefault;
  *
  */
 export type QuoteSlice = prismic.SharedSlice<"quote", QuoteSliceVariation>;
+/**
+ * Primary content in Slider → Primary
+ *
+ */
+interface SliderSliceDefaultPrimary {
+  /**
+   * name field in *Slider → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slider.primary.name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismic.KeyTextField;
+}
+/**
+ * Default variation for Slider Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SliderSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SliderSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *Slider*
+ *
+ */
+type SliderSliceVariation = SliderSliceDefault;
+/**
+ * Slider Shared Slice
+ *
+ * - **API ID**: `slider`
+ * - **Description**: `Slider`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SliderSlice = prismic.SharedSlice<"slider", SliderSliceVariation>;
+/**
+ * Primary content in Specialists → Primary
+ *
+ */
+interface SpecialistsSliceDefaultPrimary {
+  /**
+   * name field in *Specialists → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: specialists.primary.name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismic.KeyTextField;
+}
+/**
+ * Default variation for Specialists Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SpecialistsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SpecialistsSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *Specialists*
+ *
+ */
+type SpecialistsSliceVariation = SpecialistsSliceDefault;
+/**
+ * Specialists Shared Slice
+ *
+ * - **API ID**: `specialists`
+ * - **Description**: `Specialists`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SpecialistsSlice = prismic.SharedSlice<
+  "specialists",
+  SpecialistsSliceVariation
+>;
+/**
+ * Primary content in Testimonials → Primary
+ *
+ */
+interface TestimotalsSliceDefaultPrimary {
+  /**
+   * name field in *Testimonials → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimotals.primary.name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismic.KeyTextField;
+}
+/**
+ * Default variation for Testimonials Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TestimotalsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TestimotalsSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *Testimonials*
+ *
+ */
+type TestimotalsSliceVariation = TestimotalsSliceDefault;
+/**
+ * Testimonials Shared Slice
+ *
+ * - **API ID**: `testimotals`
+ * - **Description**: `Testimotals`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TestimotalsSlice = prismic.SharedSlice<
+  "testimotals",
+  TestimotalsSliceVariation
+>;
 /**
  * Primary content in Text → Primary
  *
@@ -648,6 +881,52 @@ export type TextWithImageSlice = prismic.SharedSlice<
   TextWithImageSliceVariation
 >;
 /**
+ * Primary content in Treatments → Primary
+ *
+ */
+interface TreatmentsSliceDefaultPrimary {
+  /**
+   * name field in *Treatments → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treatments.primary.name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismic.KeyTextField;
+}
+/**
+ * Default variation for Treatments Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TreatmentsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TreatmentsSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *Treatments*
+ *
+ */
+type TreatmentsSliceVariation = TreatmentsSliceDefault;
+/**
+ * Treatments Shared Slice
+ *
+ * - **API ID**: `treatments`
+ * - **Description**: `Treatments`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TreatmentsSlice = prismic.SharedSlice<
+  "treatments",
+  TreatmentsSliceVariation
+>;
+/**
  * Primary content in UserCards → Primary
  *
  */
@@ -731,6 +1010,10 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocument,
       AllDocumentTypes,
+      ContactFormSliceDefaultPrimary,
+      ContactFormSliceDefault,
+      ContactFormSliceVariation,
+      ContactFormSlice,
       HeroSliceDefaultPrimary,
       HeroSliceDefault,
       HeroSliceVariation,
@@ -747,10 +1030,26 @@ declare module "@prismicio/client" {
       ImageCardsSliceDefault,
       ImageCardsSliceVariation,
       ImageCardsSlice,
+      NumbersSliceDefaultPrimary,
+      NumbersSliceDefault,
+      NumbersSliceVariation,
+      NumbersSlice,
       QuoteSliceDefaultPrimary,
       QuoteSliceDefault,
       QuoteSliceVariation,
       QuoteSlice,
+      SliderSliceDefaultPrimary,
+      SliderSliceDefault,
+      SliderSliceVariation,
+      SliderSlice,
+      SpecialistsSliceDefaultPrimary,
+      SpecialistsSliceDefault,
+      SpecialistsSliceVariation,
+      SpecialistsSlice,
+      TestimotalsSliceDefaultPrimary,
+      TestimotalsSliceDefault,
+      TestimotalsSliceVariation,
+      TestimotalsSlice,
       TextSliceDefaultPrimary,
       TextSliceDefault,
       TextSliceTwoColumnsPrimary,
@@ -763,6 +1062,10 @@ declare module "@prismicio/client" {
       TextWithImageSliceWithButton,
       TextWithImageSliceVariation,
       TextWithImageSlice,
+      TreatmentsSliceDefaultPrimary,
+      TreatmentsSliceDefault,
+      TreatmentsSliceVariation,
+      TreatmentsSlice,
       UserCardSliceDefaultPrimary,
       UserCardSliceDefault,
       UserCardSliceVariation,

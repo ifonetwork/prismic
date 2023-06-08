@@ -8,209 +8,11 @@ export default function About({ navigation }) {
 
     return (
         <div id="wrapper">
-
-
-
-
-            <div id="top-bar">
-
-                <div class="container">
-
-
-
-                    <div class="row justify-content-between">
-
-                        <div class="col-12 col-md-auto d-none d-md-flex">
-
-
-
-
-                            <div class="top-links">
-
-                                <ul class="top-links-container">
-
-                                    <li class="top-links-item"><a href="#"><i class="bi-clock"></i> Timings</a></li>
-
-                                    <li class="top-links-item"><a href="#"><i class="bi-telephone"></i> +1-800-9876-221</a></li>
-
-                                    <li class="top-links-item"><a href="#" class="text-transform-none"><i class="bi-envelope"></i> medical@canvas.com</a></li>
-
-                                </ul>
-
-                            </div>
-
-
-
-                        </div>
-
-
-
-                        <div class="col-12 col-md-auto">
-
-
-
-
-                            <div class="top-links">
-
-                                <ul class="top-links-container">
-
-                                    <li class="top-links-item"><a href="#">EN</a>
-
-                                        <ul class="top-links-sub-menu">
-
-                                            <li class="top-links-item">
-                                                <a href="#"><img src="/static/images/icons/flags/french.png" alt="French" /> FR</a></li>
-
-                                            <li class="top-links-item"><a href="#"><img src="/static/images/icons/flags/italian.png" alt="Italian" /> IT</a></li>
-
-                                            <li class="top-links-item"><a href="#"><img src="/static/images/icons/flags/german.png" alt="German" /> DE</a></li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li class="top-links-item"><a href="demo-medical.html#booking-appointment-form" class="bg-color text-white">Book an Appointment</a></li>
-
-                                </ul>
-
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-            </div>
-
-
-
-
-            <header id="header" data-menu-padding="28" data-sticky-menu-padding="8">
-
-                <div id="header-wrap">
-
-                    <div class="container">
-
-                        <div class="header-row">
-
-
-
-                            <div id="logo">
-
-                                <a href="index.html">
-
-                                    <img class="logo-default" srcset="/static/demos/medical/images/logo-medical.png, /static/demos/medical/images/logo-medical@2x.png 2x" src="/static/demos/medical/images/logo-medical@2x.png" alt="Canvas Logo" />
-
-                                </a>
-
-                            </div>
-
-
-
-
-                            <div class="primary-menu-trigger">
-
-                                <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
-
-                                    <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
-
-                                </button>
-
-                            </div>
-
-
-
-
-                            <nav class="primary-menu style-3 menu-spacing-margin">
-
-
-
-
-
-                                {/* <ul className="flex flex-wrap gap-6 md:gap-10">
-            {navigation.data?.links.map((item) => (
-              <li
-                key={prismic.asText(item.label)}
-                className="font-semibold tracking-tight text-slate-800"
-              >
-                <PrismicNextLink field={item.link}>
-                  <PrismicText field={item.label} />
-                </PrismicNextLink>
-              </li>
-            ))}
-          </ul> */}
-
-
-                                <ul class="menu-container">
-                                    {navigation.data?.links.map((item) => (
-                                        <li class="menu-item current"   key={prismic.asText(item.label)}>
-
-                                            <PrismicNextLink field={item.link} className="menu-link">
-                                                <div>{prismic.asText(item.label)}</div>
-                                            </PrismicNextLink>
-                                        </li>
-                                    ))}
-
-
-                                    {/* <li class="menu-item current"><a class="menu-link" href="demo-medical.html"><div>Home</div></a></li>
-
-                                    <li class="menu-item"><a class="menu-link" href="demo-medical-about-us.html"><div>About Us</div></a></li>
-
-                                    <li class="menu-item"><a class="menu-link" href="demo-medical-departments.html"><div>Departments</div></a></li>
-
-                                    <li class="menu-item"><a class="menu-link" href="demo-medical-appointment.html"><div>Appointment</div></a></li>
-
-                                    <li class="menu-item"><a class="menu-link" href="demo-medical-doctors.html"><div>Doctors</div></a>
-
-                                        <ul class="sub-menu-container">
-
-                                            <li class="menu-item"><a class="menu-link" href="demo-medical-doctors-lists.html"><div>2 columns - List style</div></a></li>
-
-                                            <li class="menu-item"><a class="menu-link" href="demo-medical-doctors-3.html"><div>3 columns</div></a></li>
-
-                                            <li class="menu-item"><a class="menu-link" href="demo-medical-doctors.html"><div>4 columns</div></a></li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li class="menu-item"><a class="menu-link" href="demo-medical-blog.html"><div>Blog</div></a></li>
-
-                                    <li class="menu-item"><a class="menu-link" href="demo-medical-contact.html"><div>Contact</div></a></li> */}
-
-                                </ul>
-
-
-
-                            </nav>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="header-wrap-clone"></div>
-
-            </header>
-
+            {/* //slider */}
             <section id="slider" class="slider-element swiper_wrapper min-vh-50 min-vh-md-100" data-loop="true" data-autoplay="5000">
-
                 <div class="slider-inner">
-
-
-
                     <div class="swiper-container swiper-parent">
-
                         <div class="swiper-wrapper">
-
                             <div class="swiper-slide">
 
                                 <div class="container">
@@ -268,7 +70,10 @@ export default function About({ navigation }) {
                 </div>
 
             </section>
-            <section id="content">
+
+            {/* //testimatals */}
+            <section id="testimotals">
+
 
                 <div class="content-wrap">
 
@@ -425,149 +230,162 @@ export default function About({ navigation }) {
 
 
                     </div>
+                </div>
+            </section>
 
 
+            {/* //form  */}
 
-                    <div class="section row p-0 align-items-stretch dark mt-4">
+            <section id="content-contact">
 
-                        <div class="col-lg-5"
+                <div class="section row p-0 align-items-stretch dark mt-4">
 
-                        // style="background: url('/static/demos/medical/images/section-bg.jpg') center center no-repeat; background-size: cover; min-height: 250px;"
-                        >
+                    <div class="col-lg-5"
+                        style={{
+                            background: "url('/static/demos/medical/images/section-bg.jpg') center center no-repeat; background-size: cover; min-height: 250px;"
+                        }}
+                    >
 
-                            <div>&nbsp;</div>
+                        <div>&nbsp;</div>
 
-                        </div>
+                    </div>
 
-                        <div id="booking-appointment-form" class="col-lg-7 p-0">
+                    <div id="booking-appointment-form" class="col-lg-7 p-0">
 
-                            <div class="bg-color form-widget col-padding" data-loader="button">
+                        <div class="bg-color form-widget col-padding" data-loader="button">
 
-                                <h2>Book an Appointment.</h2>
+                            <h2>Book an Appointment.</h2>
 
-                                <div class="form-result"></div>
+                            <div class="form-result"></div>
 
-                                <form class="row mb-0" id="template-medical-form" name="template-medical-form" action="include/form.php" method="post">
+                            <form class="row mb-0" id="template-medical-form" name="template-medical-form" action="include/form.php" method="post">
 
-                                    <div class="form-process">
+                                <div class="form-process">
 
-                                        <div class="css3-spinner">
+                                    <div class="css3-spinner">
 
-                                            <div class="css3-spinner-scaler"></div>
+                                        <div class="css3-spinner-scaler"></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-8 form-group">
+
+                                    <label for="template-medical-name">Name:</label>
+
+                                    <input type="text" id="template-medical-name" name="template-medical-name" class="form-control not-dark required" value="" />
+
+                                </div>
+
+                                <div class="col-md-4 form-group">
+
+                                    <label for="template-medical-phone">Phone:</label>
+
+                                    <input type="text" id="template-medical-phone" name="template-medical-phone" class="form-control not-dark required" value="" />
+
+                                </div>
+
+                                <div class="w-100"></div>
+
+                                <div class="col-md-8 form-group">
+
+                                    <label for="template-medical-email">Email Address:</label>
+
+                                    <input type="email" id="template-medical-email" name="template-medical-email" class="form-control not-dark required" value="" />
+
+                                </div>
+
+                                <div class="col-md-4 form-group">
+
+                                    <label for="template-medical-dob">Date of Birth:</label>
+
+                                    <input type="text" id="template-medical-dob" name="template-medical-dob" class="form-control not-dark required" value="" placeholder="DD/MM/YYYY" />
+
+                                </div>
+
+                                <div class="w-100"></div>
+
+                                <div class="col-md-5">
+
+                                    <div class="row">
+
+                                        <div class="col-12 form-group">
+
+                                            <label for="template-medical-appoint-date">Appointment Date:</label>
+
+                                            <input type="text" id="template-medical-appoint-date" name="template-medical-appoint-date" class="form-control not-dark required" value="" placeholder="DD/MM/YYYY" />
+
+                                        </div>
+
+                                        <div class="col-12 form-group">
+
+                                            <label for="template-medical-second-booking">Booked with us Before?</label><br />
+
+                                            <label class="me-4">
+
+                                                <input type="radio" id="template-medical-second-booking" name="template-medical-second-booking" value="yes" />
+
+                                                Yes
+
+                                            </label>
+
+                                            <label>
+
+                                                <input type="radio" name="template-medical-second-booking" value="no" checked />
+
+                                                No
+
+                                            </label>
 
                                         </div>
 
                                     </div>
 
-                                    <div class="col-md-8 form-group">
+                                </div>
 
-                                        <label for="template-medical-name">Name:</label>
+                                <div class="col-md-7 form-group">
 
-                                        <input type="text" id="template-medical-name" name="template-medical-name" class="form-control not-dark required" value="" />
+                                    <label for="template-medical-message">Message:</label>
 
-                                    </div>
+                                    <textarea id="template-medical-message" name="template-medical-message" class="form-control not-dark required" cols="30" rows="5"></textarea>
 
-                                    <div class="col-md-4 form-group">
+                                </div>
 
-                                        <label for="template-medical-phone">Phone:</label>
+                                <div class="w-100"></div>
 
-                                        <input type="text" id="template-medical-phone" name="template-medical-phone" class="form-control not-dark required" value="" />
+                                <div class="col-12 form-group d-none">
 
-                                    </div>
+                                    <input type="text" name="template-medical-botcheck" value="" />
 
-                                    <div class="w-100"></div>
+                                </div>
 
-                                    <div class="col-md-8 form-group">
+                                <div class="col-12 form-group text-end">
 
-                                        <label for="template-medical-email">Email Address:</label>
+                                    <button class="button button-white button-light button-rounded m-0" type="submit" value="submit">Confirm Booking</button>
 
-                                        <input type="email" id="template-medical-email" name="template-medical-email" class="form-control not-dark required" value="" />
+                                </div>
 
-                                    </div>
+                                <input type="hidden" name="prefix" value="template-medical-" />
 
-                                    <div class="col-md-4 form-group">
-
-                                        <label for="template-medical-dob">Date of Birth:</label>
-
-                                        <input type="text" id="template-medical-dob" name="template-medical-dob" class="form-control not-dark required" value="" placeholder="DD/MM/YYYY" />
-
-                                    </div>
-
-                                    <div class="w-100"></div>
-
-                                    <div class="col-md-5">
-
-                                        <div class="row">
-
-                                            <div class="col-12 form-group">
-
-                                                <label for="template-medical-appoint-date">Appointment Date:</label>
-
-                                                <input type="text" id="template-medical-appoint-date" name="template-medical-appoint-date" class="form-control not-dark required" value="" placeholder="DD/MM/YYYY" />
-
-                                            </div>
-
-                                            <div class="col-12 form-group">
-
-                                                <label for="template-medical-second-booking">Booked with us Before?</label><br />
-
-                                                <label class="me-4">
-
-                                                    <input type="radio" id="template-medical-second-booking" name="template-medical-second-booking" value="yes" />
-
-                                                    Yes
-
-                                                </label>
-
-                                                <label>
-
-                                                    <input type="radio" name="template-medical-second-booking" value="no" checked />
-
-                                                    No
-
-                                                </label>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-md-7 form-group">
-
-                                        <label for="template-medical-message">Message:</label>
-
-                                        <textarea id="template-medical-message" name="template-medical-message" class="form-control not-dark required" cols="30" rows="5"></textarea>
-
-                                    </div>
-
-                                    <div class="w-100"></div>
-
-                                    <div class="col-12 form-group d-none">
-
-                                        <input type="text" name="template-medical-botcheck" value="" />
-
-                                    </div>
-
-                                    <div class="col-12 form-group text-end">
-
-                                        <button class="button button-white button-light button-rounded m-0" type="submit" value="submit">Confirm Booking</button>
-
-                                    </div>
-
-                                    <input type="hidden" name="prefix" value="template-medical-" />
-
-                                </form>
+                            </form>
 
 
-
-                            </div>
 
                         </div>
 
                     </div>
 
+                </div>
 
+                {/* </div> */}
+            </section>
+
+            {/* Treatments Offered */}
+
+            <section id="Treatments">
+
+                <div class="content-wrap">
 
                     <div class="container">
 
@@ -779,6 +597,16 @@ export default function About({ navigation }) {
 
                     </div>
 
+                </div>
+
+            </section>
+
+            {/* // new */}
+            <section id="numbers">
+
+                <div class="content-wrap">
+
+                
 
 
                     <div class="section mt-0">
@@ -899,10 +727,18 @@ export default function About({ navigation }) {
 
 
 
+        
+
+                </div>
+
+            </section>
+
+            
+            {/* // specialists */}
+            <section id="specialists">
+                <div class="content-wrap">
                     <div class="container">
-
                         <div class="heading-block text-center border-bottom-0">
-
                             <h3>Meet our Team of Specialists<span>.</span></h3>
 
                             <span>We make sure that your Life are in Good Hands.</span>
@@ -1068,282 +904,6 @@ export default function About({ navigation }) {
                 </div>
 
             </section>
-
-
-
-            <footer id="footer" class="bg-contrast-100" style={{
-                borderTop: "2px solid rgba(var(--cnvs-contrast-rgb),0.06)"
-            }} >
-
-                <div class="container" style={{
-                    borderBottom: "1px solid rgba(var(--cnvs-contrast-rgb),0.06)"
-                }} >
-
-
-
-
-                    <div class="footer-widgets-wrap">
-
-
-
-                        <div class="row gutter-50 col-mb-50">
-
-                            <div class="col-md-8">
-
-
-
-                                <div class="widget">
-
-                                    <div class="widget-subscribe-form-result"></div>
-
-                                    <form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0 row">
-
-                                        <div class="col-lg-9">
-
-                                            <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email to Subscribe to our Newsletter" />
-
-                                        </div>
-
-                                        <div class="col-lg-3">
-
-                                            <button class="button button-rounded m-0 text-center w-100" type="submit">Subscribe</button>
-
-                                        </div>
-
-                                    </form>
-
-
-
-                                    <div class="line line-sm"></div>
-
-
-
-                                    <div class="row col-mb-30">
-
-                                        <div class="col-lg-3 col-6 widget_links">
-
-                                            <ul>
-
-                                                <li><a href="#">Home</a></li>
-
-                                                <li><a href="#">About</a></li>
-
-                                                <li><a href="#">FAQs</a></li>
-
-                                                <li><a href="#">Support</a></li>
-
-                                                <li><a href="#">Contact</a></li>
-
-                                            </ul>
-
-                                        </div>
-
-
-
-                                        <div class="col-lg-3 col-6 widget_links">
-
-                                            <ul>
-
-                                                <li><a href="#">Shop</a></li>
-
-                                                <li><a href="#">Portfolio</a></li>
-
-                                                <li><a href="#">Blog</a></li>
-
-                                                <li><a href="#">Events</a></li>
-
-                                                <li><a href="#">Forums</a></li>
-
-                                            </ul>
-
-                                        </div>
-
-
-
-                                        <div class="col-lg-3 col-6 widget_links">
-
-                                            <ul>
-
-                                                <li><a href="#">Corporate</a></li>
-
-                                                <li><a href="#">Agency</a></li>
-
-                                                <li><a href="#">eCommerce</a></li>
-
-                                                <li><a href="#">Personal</a></li>
-
-                                                <li><a href="#">One Page</a></li>
-
-                                            </ul>
-
-                                        </div>
-
-
-
-                                        <div class="col-lg-3 col-6 widget_links">
-
-                                            <ul>
-
-                                                <li><a href="#">Restaurant</a></li>
-
-                                                <li><a href="#">Wedding</a></li>
-
-                                                <li><a href="#">App Showcase</a></li>
-
-                                                <li><a href="#">Magazine</a></li>
-
-                                                <li><a href="#">Landing Page</a></li>
-
-                                            </ul>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-
-
-                            </div>
-
-
-
-                            <div class="col-md-4">
-
-
-
-                                <div class="widget">
-
-
-
-                                    <div class="row col-mb-30">
-
-                                        <div class="col-lg-12">
-
-                                            <div class="footer-big-contacts">
-
-                                                <span>Call Us:</span>
-
-                                                (1) 22 55412474
-
-                                            </div>
-
-                                        </div>
-
-
-
-                                        <div class="col-lg-12">
-
-                                            <div class="footer-big-contacts">
-
-                                                <span>Send an Email:</span>
-
-                                                info@canvas.com
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-
-
-                                </div>
-
-
-
-                                <div class="widget subscribe-widget">
-
-
-
-                                    <div class="row col-mb-30">
-
-                                        <div class="col-sm-6 col-md-12 col-lg-6">
-
-                                            <a href="#" class="social-icon bg-contrast-200 h-bg-facebook mb-0 me-3">
-
-                                                <i class="fa-brands fa-facebook-f"></i>
-
-                                                <i class="fa-brands fa-facebook-f"></i>
-
-                                            </a>
-
-                                            <a href="#"><small class="d-block"><strong>Like us</strong><br />on Facebook</small></a>
-
-                                        </div>
-
-                                        <div class="col-sm-6 col-md-12 col-lg-6">
-
-                                            <a href="#" class="social-icon bg-contrast-200 h-bg-rss mb-0 me-3">
-
-                                                <i class="fa-solid fa-rss"></i>
-
-                                                <i class="fa-solid fa-rss"></i>
-
-                                            </a>
-
-                                            <a href="#"><small class="d-block"><strong>Subscribe</strong><br />to RSS Feeds</small></a>
-
-                                        </div>
-
-                                    </div>
-
-
-
-                                </div>
-
-
-
-                            </div>
-
-                        </div>
-
-
-
-                    </div>
-
-                </div>
-
-
-                <div id="copyrights" class="bg-transparent">
-
-                    <div class="container">
-
-
-
-                        <div class="row col-mb-30">
-
-                            <div class="col-md-6 text-center text-md-start">
-
-                                Copyrights &copy; 2023 All Rights Reserved by Canvas Inc.<br />
-
-                                <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
-
-                            </div>
-
-
-
-                            <div class="col-md-6 text-center text-md-end">
-
-                                <div class="copyrights-menu copyright-links">
-
-                                    <a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Team</a>/<a href="#">Clients</a>/<a href="#">FAQs</a>/<a href="#">Contact</a>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                    </div>
-
-                </div>
-
-            </footer>
-
-
 
         </div>
 

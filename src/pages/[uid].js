@@ -1,12 +1,27 @@
 import Head from "next/head";
 import * as prismic from "@prismicio/client";
 import { SliceZone } from "@prismicio/react";
-
+import {useEffect, useLayoutEffect} from 'react';
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { Layout } from "@/components/Layout";
 
 const Page = ({ page, navigation, settings }) => {
+
+  useEffect(() => {
+    window.derPower();
+    console.log("derpower")
+
+    if(typeof window.derPower === 'function') {
+      window.derPower();
+      console.log("derpower")
+    }
+  }, [page]);
+
+  useLayoutEffect(()=>{
+    console.log("derpower2")
+  },[])
+
   return (
     <Layout navigation={navigation} settings={settings}>
       <Head>
@@ -16,6 +31,9 @@ const Page = ({ page, navigation, settings }) => {
         </title>
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
+
+
+
     </Layout>
   );
 };

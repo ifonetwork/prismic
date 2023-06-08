@@ -1,0 +1,23 @@
+{
+  "id": "specialists",
+  "type": "SharedSlice",
+  "name": "Specialists",
+  "description": "Specialists",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "name": {
+          "type": "Text",
+          "config": { "label": "name", "placeholder": "" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

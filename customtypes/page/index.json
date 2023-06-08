@@ -35,7 +35,13 @@
             "image": { "type": "SharedSlice" },
             "image_cards": { "type": "SharedSlice" },
             "text_with_image": { "type": "SharedSlice" },
-            "user_card": { "type": "SharedSlice" }
+            "user_card": { "type": "SharedSlice" },
+            "slider": { "type": "SharedSlice" },
+            "testimotals": { "type": "SharedSlice" },
+            "contact_form": { "type": "SharedSlice" },
+            "treatments": { "type": "SharedSlice" },
+            "numbers": { "type": "SharedSlice" },
+            "specialists": { "type": "SharedSlice" }
           }
         }
       }
