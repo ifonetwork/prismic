@@ -148,7 +148,7 @@ export default function About({ navigation }) {
 
                                 <ul class="menu-container">
                                     {navigation.data?.links.map((item) => (
-                                        <li class="menu-item current">
+                                        <li class="menu-item current"   key={prismic.asText(item.label)}>
 
                                             <PrismicNextLink field={item.link} className="menu-link">
                                                 <div>{prismic.asText(item.label)}</div>
