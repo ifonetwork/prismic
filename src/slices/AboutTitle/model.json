@@ -1,0 +1,23 @@
+{
+  "id": "about_title",
+  "type": "SharedSlice",
+  "name": "AboutTitle",
+  "description": "AboutTitle",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "name": {
+          "type": "Embed",
+          "config": { "label": "name", "placeholder": "" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -41,7 +41,10 @@
             "contact_form": { "type": "SharedSlice" },
             "treatments": { "type": "SharedSlice" },
             "numbers": { "type": "SharedSlice" },
-            "specialists": { "type": "SharedSlice" }
+            "specialists": { "type": "SharedSlice" },
+            "about_title": { "type": "SharedSlice" },
+            "about_block": { "type": "SharedSlice" },
+            "about_what_we_do": { "type": "SharedSlice" }
           }
         }
       }

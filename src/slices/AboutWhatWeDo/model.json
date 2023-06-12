@@ -1,0 +1,23 @@
+{
+  "id": "about_what_we_do",
+  "type": "SharedSlice",
+  "name": "AboutWhatWeDo",
+  "description": "AboutWhatWeDo",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "name2": {
+          "type": "Embed",
+          "config": { "label": "name2", "placeholder": "" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

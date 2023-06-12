@@ -113,7 +113,10 @@ type PageDocumentDataSlicesSlice =
   | ContactFormSlice
   | TreatmentsSlice
   | NumbersSlice
-  | SpecialistsSlice;
+  | SpecialistsSlice
+  | AboutTitleSlice
+  | AboutBlockSlice
+  | AboutWhatWeDoSlice;
 /**
  * Page document from Prismic
  *
@@ -158,6 +161,144 @@ export type AllDocumentTypes =
   | NavigationDocument
   | PageDocument
   | SettingsDocument;
+/**
+ * Primary content in AboutBlock → Primary
+ *
+ */
+interface AboutBlockSliceDefaultPrimary {
+  /**
+   * name field in *AboutBlock → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_block.primary.name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismic.KeyTextField;
+}
+/**
+ * Default variation for AboutBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AboutBlockSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *AboutBlock*
+ *
+ */
+type AboutBlockSliceVariation = AboutBlockSliceDefault;
+/**
+ * AboutBlock Shared Slice
+ *
+ * - **API ID**: `about_block`
+ * - **Description**: `AboutBlock`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutBlockSlice = prismic.SharedSlice<
+  "about_block",
+  AboutBlockSliceVariation
+>;
+/**
+ * Primary content in AboutTitle → Primary
+ *
+ */
+interface AboutTitleSliceDefaultPrimary {
+  /**
+   * name field in *AboutTitle → Primary*
+   *
+   * - **Field Type**: Embed
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_title.primary.name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/embed
+   *
+   */
+  name: prismic.EmbedField;
+}
+/**
+ * Default variation for AboutTitle Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutTitleSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AboutTitleSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *AboutTitle*
+ *
+ */
+type AboutTitleSliceVariation = AboutTitleSliceDefault;
+/**
+ * AboutTitle Shared Slice
+ *
+ * - **API ID**: `about_title`
+ * - **Description**: `AboutTitle`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutTitleSlice = prismic.SharedSlice<
+  "about_title",
+  AboutTitleSliceVariation
+>;
+/**
+ * Primary content in AboutWhatWeDo → Primary
+ *
+ */
+interface AboutWhatWeDoSliceDefaultPrimary {
+  /**
+   * name2 field in *AboutWhatWeDo → Primary*
+   *
+   * - **Field Type**: Embed
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_what_we_do.primary.name2
+   * - **Documentation**: https://prismic.io/docs/core-concepts/embed
+   *
+   */
+  name2: prismic.EmbedField;
+}
+/**
+ * Default variation for AboutWhatWeDo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutWhatWeDoSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AboutWhatWeDoSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *AboutWhatWeDo*
+ *
+ */
+type AboutWhatWeDoSliceVariation = AboutWhatWeDoSliceDefault;
+/**
+ * AboutWhatWeDo Shared Slice
+ *
+ * - **API ID**: `about_what_we_do`
+ * - **Description**: `AboutWhatWeDo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutWhatWeDoSlice = prismic.SharedSlice<
+  "about_what_we_do",
+  AboutWhatWeDoSliceVariation
+>;
 /**
  * Primary content in ContactForm → Primary
  *
@@ -1010,6 +1151,18 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocument,
       AllDocumentTypes,
+      AboutBlockSliceDefaultPrimary,
+      AboutBlockSliceDefault,
+      AboutBlockSliceVariation,
+      AboutBlockSlice,
+      AboutTitleSliceDefaultPrimary,
+      AboutTitleSliceDefault,
+      AboutTitleSliceVariation,
+      AboutTitleSlice,
+      AboutWhatWeDoSliceDefaultPrimary,
+      AboutWhatWeDoSliceDefault,
+      AboutWhatWeDoSliceVariation,
+      AboutWhatWeDoSlice,
       ContactFormSliceDefaultPrimary,
       ContactFormSliceDefault,
       ContactFormSliceVariation,
